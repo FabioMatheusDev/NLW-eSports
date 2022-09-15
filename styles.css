@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    padding-top: 32px;
+    height: 152px;
+}
+
+header div {
+    width: 120px; 
+    margin: auto;
+    display: flex;
+    padding: 4px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header div img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+main {
+    max-width: 580px;
+    width: 90%; 
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.08);
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-List img {
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443E54;
+}
+
+.social-List {   
+    flex-wrap: wrap;
+    flex-direction: line;
+    padding: 1px;
+    padding-left: 0px;
+}
+
+/* animation */
+
+header div {
+    animation: fromTop .8s 0s;
+    
+}
+
+.bodyJogos {
+    animation: toRight .8s 0.45s backwards;
+}
+
+.bodyCanais {
+    animation: toLeft .8s 0.52s backwards;
+}
+
+.bodyRedes {
+    animation: toRight .8s 0.59s backwards;
+}
+
+@keyframes fromTop {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    40%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes toRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    20%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes toLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    20%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
